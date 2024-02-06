@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class RemoteObjectCopier : MonoBehaviour
 {
@@ -9,7 +10,7 @@ public class RemoteObjectCopier : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         // If not a copy
-        if (!other.CompareTag("Copy"))
+        if (!other.CompareTag("Copy") && other.GetComponent<XRGrabInteractable>() != null)
         {
             clonedObjectsManager.CopyRemoteToLocal(other.gameObject);
         }

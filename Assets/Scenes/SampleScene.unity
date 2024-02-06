@@ -336,6 +336,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Grabbable Cube (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 2517648225030898873, guid: 11c0797f83c5d7542a3155dedc41e747,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3182906226984242306, guid: 11c0797f83c5d7542a3155dedc41e747,
         type: 3}
       propertyPath: m_InteractionManager
@@ -454,6 +459,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Grabbable Cube (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2517648225030898873, guid: 11c0797f83c5d7542a3155dedc41e747,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3182906226984242306, guid: 11c0797f83c5d7542a3155dedc41e747,
         type: 3}
@@ -792,6 +802,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Grabbable Cube (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 2517648225030898873, guid: 11c0797f83c5d7542a3155dedc41e747,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3182906226984242306, guid: 11c0797f83c5d7542a3155dedc41e747,
         type: 3}
       propertyPath: m_InteractionManager
@@ -959,6 +974,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Grabbable Cube (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 2517648225030898873, guid: 11c0797f83c5d7542a3155dedc41e747,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3182906226984242306, guid: 11c0797f83c5d7542a3155dedc41e747,
         type: 3}
       propertyPath: m_InteractionManager
@@ -1072,6 +1092,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Grabbable Cube (21)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2517648225030898873, guid: 11c0797f83c5d7542a3155dedc41e747,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3182906226984242306, guid: 11c0797f83c5d7542a3155dedc41e747,
         type: 3}
@@ -1191,6 +1216,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Grabbable Cube (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2517648225030898873, guid: 11c0797f83c5d7542a3155dedc41e747,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3182906226984242306, guid: 11c0797f83c5d7542a3155dedc41e747,
         type: 3}
@@ -1324,6 +1354,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Grabbable Cube (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2517648225030898873, guid: 11c0797f83c5d7542a3155dedc41e747,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3182906226984242306, guid: 11c0797f83c5d7542a3155dedc41e747,
         type: 3}
@@ -2330,6 +2365,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Grabbable Cube (23)
       objectReference: {fileID: 0}
+    - target: {fileID: 2517648225030898873, guid: 11c0797f83c5d7542a3155dedc41e747,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3182906226984242306, guid: 11c0797f83c5d7542a3155dedc41e747,
         type: 3}
       propertyPath: m_InteractionManager
@@ -2448,6 +2488,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Grabbable Cube (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2517648225030898873, guid: 11c0797f83c5d7542a3155dedc41e747,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3182906226984242306, guid: 11c0797f83c5d7542a3155dedc41e747,
         type: 3}
@@ -2700,6 +2745,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Grabbable Cube (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 2517648225030898873, guid: 11c0797f83c5d7542a3155dedc41e747,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3182906226984242306, guid: 11c0797f83c5d7542a3155dedc41e747,
         type: 3}
       propertyPath: m_InteractionManager
@@ -2812,6 +2862,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Grabbable Cube (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2517648225030898873, guid: 11c0797f83c5d7542a3155dedc41e747,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3182906226984242306, guid: 11c0797f83c5d7542a3155dedc41e747,
         type: 3}
@@ -2987,6 +3042,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Grabbable Cube (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 2517648225030898873, guid: 11c0797f83c5d7542a3155dedc41e747,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3182906226984242306, guid: 11c0797f83c5d7542a3155dedc41e747,
         type: 3}
       propertyPath: m_InteractionManager
@@ -3126,6 +3186,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Grabbable Cube (22)
       objectReference: {fileID: 0}
+    - target: {fileID: 2517648225030898873, guid: 11c0797f83c5d7542a3155dedc41e747,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3182906226984242306, guid: 11c0797f83c5d7542a3155dedc41e747,
         type: 3}
       propertyPath: m_InteractionManager
@@ -3245,6 +3310,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Grabbable Cube (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 2517648225030898873, guid: 11c0797f83c5d7542a3155dedc41e747,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3182906226984242306, guid: 11c0797f83c5d7542a3155dedc41e747,
         type: 3}
       propertyPath: m_InteractionManager
@@ -3358,6 +3428,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Grabbable Cube (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2517648225030898873, guid: 11c0797f83c5d7542a3155dedc41e747,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3182906226984242306, guid: 11c0797f83c5d7542a3155dedc41e747,
         type: 3}
@@ -3582,6 +3657,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Grabbable Cube (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 2517648225030898873, guid: 11c0797f83c5d7542a3155dedc41e747,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3182906226984242306, guid: 11c0797f83c5d7542a3155dedc41e747,
         type: 3}
       propertyPath: m_InteractionManager
@@ -3700,6 +3780,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Grabbable Cube
+      objectReference: {fileID: 0}
+    - target: {fileID: 2517648225030898873, guid: 11c0797f83c5d7542a3155dedc41e747,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3182906226984242306, guid: 11c0797f83c5d7542a3155dedc41e747,
         type: 3}
@@ -3863,6 +3948,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Grabbable Cube (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2517648225030898873, guid: 11c0797f83c5d7542a3155dedc41e747,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3182906226984242306, guid: 11c0797f83c5d7542a3155dedc41e747,
         type: 3}
@@ -4371,6 +4461,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Grabbable Cube (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 2517648225030898873, guid: 11c0797f83c5d7542a3155dedc41e747,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3182906226984242306, guid: 11c0797f83c5d7542a3155dedc41e747,
         type: 3}
       propertyPath: m_InteractionManager
@@ -4633,6 +4728,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Grabbable Cube (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 2517648225030898873, guid: 11c0797f83c5d7542a3155dedc41e747,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3182906226984242306, guid: 11c0797f83c5d7542a3155dedc41e747,
         type: 3}
       propertyPath: m_InteractionManager
@@ -4808,7 +4908,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1313539047}
   m_LocalRotation: {x: -0, y: 0.33703825, z: -0, w: 0.94149095}
-  m_LocalPosition: {x: -3.85, y: 0, z: 1.2}
+  m_LocalPosition: {x: -8.75, y: 0, z: 11.03}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4844,7 +4944,7 @@ GameObject:
   - component: {fileID: 1325850041}
   - component: {fileID: 1325850045}
   - component: {fileID: 1325850044}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: RemoteSphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4979,6 +5079,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Grabbable Cube (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 2517648225030898873, guid: 11c0797f83c5d7542a3155dedc41e747,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3182906226984242306, guid: 11c0797f83c5d7542a3155dedc41e747,
         type: 3}
       propertyPath: m_InteractionManager
@@ -5112,6 +5217,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Grabbable Cube (24)
       objectReference: {fileID: 0}
+    - target: {fileID: 2517648225030898873, guid: 11c0797f83c5d7542a3155dedc41e747,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3182906226984242306, guid: 11c0797f83c5d7542a3155dedc41e747,
         type: 3}
       propertyPath: m_InteractionManager
@@ -5225,6 +5335,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Grabbable Cube (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 2517648225030898873, guid: 11c0797f83c5d7542a3155dedc41e747,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3182906226984242306, guid: 11c0797f83c5d7542a3155dedc41e747,
         type: 3}
       propertyPath: m_InteractionManager
@@ -5332,6 +5447,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Grabbable Cube (24)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2517648225030898873, guid: 11c0797f83c5d7542a3155dedc41e747,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3182906226984242306, guid: 11c0797f83c5d7542a3155dedc41e747,
         type: 3}
@@ -5451,6 +5571,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Grabbable Cube (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2517648225030898873, guid: 11c0797f83c5d7542a3155dedc41e747,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3182906226984242306, guid: 11c0797f83c5d7542a3155dedc41e747,
         type: 3}
@@ -5676,6 +5801,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Grabbable Cube (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2517648225030898873, guid: 11c0797f83c5d7542a3155dedc41e747,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3182906226984242306, guid: 11c0797f83c5d7542a3155dedc41e747,
         type: 3}
       propertyPath: m_InteractionManager
@@ -5841,6 +5971,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Grabbable Cube (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 2517648225030898873, guid: 11c0797f83c5d7542a3155dedc41e747,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3182906226984242306, guid: 11c0797f83c5d7542a3155dedc41e747,
         type: 3}
       propertyPath: m_InteractionManager
@@ -5955,6 +6090,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Grabbable Cube (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 2517648225030898873, guid: 11c0797f83c5d7542a3155dedc41e747,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3182906226984242306, guid: 11c0797f83c5d7542a3155dedc41e747,
         type: 3}
       propertyPath: m_InteractionManager
@@ -6068,6 +6208,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Grabbable Cube (22)
       objectReference: {fileID: 0}
+    - target: {fileID: 2517648225030898873, guid: 11c0797f83c5d7542a3155dedc41e747,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3182906226984242306, guid: 11c0797f83c5d7542a3155dedc41e747,
         type: 3}
       propertyPath: m_InteractionManager
@@ -6180,6 +6325,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Grabbable Cube (21)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2517648225030898873, guid: 11c0797f83c5d7542a3155dedc41e747,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3182906226984242306, guid: 11c0797f83c5d7542a3155dedc41e747,
         type: 3}
@@ -6299,6 +6449,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Grabbable Cube (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2517648225030898873, guid: 11c0797f83c5d7542a3155dedc41e747,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3182906226984242306, guid: 11c0797f83c5d7542a3155dedc41e747,
         type: 3}
@@ -6433,6 +6588,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Grabbable Cube (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 2517648225030898873, guid: 11c0797f83c5d7542a3155dedc41e747,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3182906226984242306, guid: 11c0797f83c5d7542a3155dedc41e747,
         type: 3}
       propertyPath: m_InteractionManager
@@ -6558,6 +6718,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Grabbable Cube (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 2517648225030898873, guid: 11c0797f83c5d7542a3155dedc41e747,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3182906226984242306, guid: 11c0797f83c5d7542a3155dedc41e747,
         type: 3}
       propertyPath: m_InteractionManager
@@ -6670,6 +6835,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Grabbable Cube (23)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2517648225030898873, guid: 11c0797f83c5d7542a3155dedc41e747,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3182906226984242306, guid: 11c0797f83c5d7542a3155dedc41e747,
         type: 3}
@@ -6784,6 +6954,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Grabbable Cube (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 2517648225030898873, guid: 11c0797f83c5d7542a3155dedc41e747,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3182906226984242306, guid: 11c0797f83c5d7542a3155dedc41e747,
         type: 3}
       propertyPath: m_InteractionManager
@@ -6896,6 +7071,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Grabbable Cube (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2517648225030898873, guid: 11c0797f83c5d7542a3155dedc41e747,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3182906226984242306, guid: 11c0797f83c5d7542a3155dedc41e747,
         type: 3}
@@ -7094,6 +7274,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Grabbable Cube (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 2517648225030898873, guid: 11c0797f83c5d7542a3155dedc41e747,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3182906226984242306, guid: 11c0797f83c5d7542a3155dedc41e747,
         type: 3}
       propertyPath: m_InteractionManager
@@ -7218,6 +7403,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Grabbable Cube (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2517648225030898873, guid: 11c0797f83c5d7542a3155dedc41e747,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3182906226984242306, guid: 11c0797f83c5d7542a3155dedc41e747,
         type: 3}
@@ -7397,6 +7587,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Grabbable Cube
+      objectReference: {fileID: 0}
+    - target: {fileID: 2517648225030898873, guid: 11c0797f83c5d7542a3155dedc41e747,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3182906226984242306, guid: 11c0797f83c5d7542a3155dedc41e747,
         type: 3}

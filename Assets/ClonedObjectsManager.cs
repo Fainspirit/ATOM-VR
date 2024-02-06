@@ -45,6 +45,10 @@ public class ClonedObjectsManager : MonoBehaviour
             // scale
             copy.transform.localScale *= scalar;
         }
+        else
+        {
+
+        }
     }
 
 
@@ -182,7 +186,18 @@ public class ClonedObjectsManager : MonoBehaviour
         if (ObjectInRemoteSphere(original))
         {
             // Then retrack the local copy
-            remoteToLocalCopies.Add(original, grabbedLocalCopy);
+            // In the case where we grabbed it, then left and came back, we don't want to add it again
+            if (!remoteToLocalCopies.ContainsKey(original))
+            {
+                remoteToLocalCopies.Add(original, grabbedLocalCopy);
+            }
+            else
+            {
+                // we need to remove the grabbed local copy
+                // We could try to prevent it from being created in the first place
+                // But then we need to track what it is somewhere
+                Destroy(grabbedLocalCopy);
+            }
         }
         else 
         {
