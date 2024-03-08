@@ -50,6 +50,11 @@ public class ExperimentRunner : MonoBehaviour
         // Loop every 6
         selectedPresentationOrder = presentationOrder[experimentNumber % 6];
 
+    }
+
+    public void BeginExperiments()
+    {
+        Debug.Log("Experiments begin!");
         RunNextExperimentBlock();
     }
 
