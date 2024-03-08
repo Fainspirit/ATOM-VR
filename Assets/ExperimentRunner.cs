@@ -106,6 +106,7 @@ public class ExperimentRunner : MonoBehaviour
 
     void ConcludeExperiment()
     {
+        Debug.Log("Experiment finished!");
         WriteExperimentResults();
     }
 
@@ -144,6 +145,9 @@ public class ExperimentRunner : MonoBehaviour
 
         sw.Flush();
         sw.Close();
+
+        Debug.Log("Finished writing stats!");
+
     }
 
     // Run them to here because apparently we can't assign them at runtime... woo

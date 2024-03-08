@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ExperimentObjectSettings : MonoBehaviour
+public class ExperimentObjectTaskData : MonoBehaviour
 {
     public bool isGrabTarget;
 }

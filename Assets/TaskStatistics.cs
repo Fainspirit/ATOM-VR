@@ -1,6 +1,8 @@
 
+using System;
 using System.IO;
 
+[Serializable]
 public class TaskStatistics
 {
     public float totalTaskTime = 0;

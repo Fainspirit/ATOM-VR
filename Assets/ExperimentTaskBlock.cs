@@ -96,7 +96,7 @@ public abstract class ExperimentTaskBlock : MonoBehaviour
     {
         OnSelectXRObject(args);
 
-        currentTask.OnSelectTrackStats(args);
+        currentTask.OnSelectObjectInTask(args);
 
     }
     public abstract void OnSelectXRObject(SelectEnterEventArgs args);
@@ -105,7 +105,7 @@ public abstract class ExperimentTaskBlock : MonoBehaviour
     {
         OnDeselectXRObject(args);
 
-        currentTask.OnDeselectTrackStats(args);
+        currentTask.OnDeselectObjectInTask(args);
     }
     public abstract void OnDeselectXRObject(SelectExitEventArgs args);
 

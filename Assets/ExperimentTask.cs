@@ -12,6 +12,9 @@ public class ExperimentTask : MonoBehaviour
     public TaskStatistics taskStatistics;
     public ExperimentTaskBlock block;
 
+    // for tracking grab time
+    public ExperimentObjectTaskData grabbedData;
+
     private void Start()
     {
         Debug.Log($"Starting task: {name}");
@@ -57,15 +60,30 @@ public class ExperimentTask : MonoBehaviour
     private void Update()
     {
         taskStatistics.totalTaskTime += Time.deltaTime;
+
+        // Track hold time
+        if (grabbedData != null)
+        {
+            if (grabbedData.isGrabTarget)
+            {
+                taskStatistics.timeHoldingCorrectObject += Time.deltaTime;
+            }
+            else
+            {
+                taskStatistics.timeHoldingIncorrectObject += Time.deltaTime;
+            }
+        }
     }
 
-    public void OnSelectTrackStats(SelectEnterEventArgs seea)
+    public void OnSelectObjectInTask(SelectEnterEventArgs seea)
     {
         taskStatistics.totalSelections++;
 
-        ExperimentObjectSettings eos = seea.interactableObject.transform.GetComponent<ExperimentObjectSettings>();
+        ExperimentObjectTaskData eos = seea.interactableObject.transform.GetComponent<ExperimentObjectTaskData>();
         if (eos != null)
         {
+            grabbedData = eos;
+
             // wrong one
             if (!eos.isGrabTarget)
             {
@@ -74,12 +92,14 @@ public class ExperimentTask : MonoBehaviour
         }
     }
 
-    public void OnDeselectTrackStats(SelectExitEventArgs seea)
+    public void OnDeselectObjectInTask(SelectExitEventArgs seea)
     {
         // ok we let go of the correct one, time to move on
-        ExperimentObjectSettings eos = seea.interactableObject.transform.GetComponent<ExperimentObjectSettings>();
+        ExperimentObjectTaskData eos = seea.interactableObject.transform.GetComponent<ExperimentObjectTaskData>();
         if (eos != null)
         {
+            grabbedData = null;
+
             if (eos.isGrabTarget)
             {
                 // done with this task
