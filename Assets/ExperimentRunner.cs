@@ -16,6 +16,10 @@ public class ExperimentRunner : MonoBehaviour
     [SerializeField] GameObject gogoInterface;
     [SerializeField] GameObject ATOMInterface;
 
+    // Task complete audio used:
+    // https://pixabay.com/sound-effects/bloop-2-186531/
+    public AudioSource audioSource;
+
     // Raycast = 0,
     // GoGo = 1,
     // ATOM = 2,
@@ -36,6 +40,8 @@ public class ExperimentRunner : MonoBehaviour
 
     private void Start()
     {
+        audioSource = GetComponent<AudioSource>();
+
         if (taskBlocks.Length != 3)
         {
             Debug.LogError("There needs to be three task blocks in the experiment!");

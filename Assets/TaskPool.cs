@@ -42,7 +42,8 @@ public class TaskPool : MonoBehaviour
         int idx = Random.Range(0, selectionsRemaining);
         ExperimentTask ret = tasks[idx];
 
-        // remove from pool by swapping the one we took with the end one
+        // "remove" from pool by swapping the one we took with the end one
+        // and decreasing the selection range
         tasks[idx] = tasks[selectionsRemaining - 1];
         tasks[selectionsRemaining - 1] = ret;
         selectionsRemaining--;

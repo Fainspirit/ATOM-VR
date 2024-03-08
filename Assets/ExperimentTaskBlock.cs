@@ -67,6 +67,9 @@ public abstract class ExperimentTaskBlock : MonoBehaviour
         task.gameObject.SetActive(false);
         OnEndTask();
 
+        // DING!
+        experimentRunner.audioSource.Play();
+
         // Move on
         AdvanceToNextTask();
     }
