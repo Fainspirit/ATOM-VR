@@ -30,7 +30,7 @@ public class ExperimentTask : MonoBehaviour
 
             taskName = this.name,
         };
-        
+
         grabbables = GetComponentsInChildren<XRGrabInteractable>();
 
         // Go through all grabbables in the task and add the appropriate listeners
@@ -66,21 +66,25 @@ public class ExperimentTask : MonoBehaviour
         ExperimentObjectSettings eos = seea.interactableObject.transform.GetComponent<ExperimentObjectSettings>();
         if (eos != null)
         {
-            if (eos.isGrabTarget)
-            {
-                // done with this task
-                CompleteTask();
-            }
-            else
+            // wrong one
+            if (!eos.isGrabTarget)
             {
                 taskStatistics.incorrectSelections++;
-
             }
         }
     }
 
     public void OnDeselectTrackStats(SelectExitEventArgs seea)
     {
-       
+        // ok we let go of the correct one, time to move on
+        ExperimentObjectSettings eos = seea.interactableObject.transform.GetComponent<ExperimentObjectSettings>();
+        if (eos != null)
+        {
+            if (eos.isGrabTarget)
+            {
+                // done with this task
+                CompleteTask();
+            }
+        }
     }
 }

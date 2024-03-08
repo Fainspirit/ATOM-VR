@@ -92,12 +92,16 @@ public class ExperimentRunner : MonoBehaviour
     public void CompleteBlock(ExperimentTaskBlock block)
     {
         nextBlockNum++;
+        // still some to do
         if (nextBlockNum < taskBlocks.Length)
         {
             RunNextExperimentBlock();
         }
-        // Done!
-        ConcludeExperiment();
+        else
+        {
+            // Done!
+            ConcludeExperiment();
+        }
     }
 
     void ConcludeExperiment()

@@ -16,7 +16,7 @@ public class GoGoHand : MonoBehaviour
 
     [SerializeField] float baseMagnitude = 0.2f;
     [SerializeField] float reachScale = 6f;
-    [SerializeField] float sphereScale = 1f;
+    [SerializeField] float sizeScale = 1f;
 
 
     // Start is called before the first frame update
@@ -46,7 +46,7 @@ public class GoGoHand : MonoBehaviour
 
 
         // calc scale
-        transform.localScale = Vector3.one * (1 + offsetDistance * 5) * sphereScale;
+        transform.localScale = Vector3.one * (1 + offsetDistance * 5) * sizeScale;
 
         // Now we have how far we are from it
         // Jump forward that difference and then offset it again

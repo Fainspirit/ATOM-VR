@@ -42,8 +42,9 @@ public class TaskPool : MonoBehaviour
         int idx = Random.Range(0, selectionsRemaining);
         ExperimentTask ret = tasks[idx];
 
-        // remove from pool by overwrite the one we took with the end one
+        // remove from pool by swapping the one we took with the end one
         tasks[idx] = tasks[selectionsRemaining - 1];
+        tasks[selectionsRemaining - 1] = ret;
         selectionsRemaining--;
         
         return ret;

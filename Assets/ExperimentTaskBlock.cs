@@ -45,6 +45,7 @@ public abstract class ExperimentTaskBlock : MonoBehaviour
 
     public void StartTaskBlock(ExperimentRunner expRun)
     {
+        taskPool.ResetPool();
         experimentRunner = expRun;
 
         AdvanceToNextTask();
@@ -61,9 +62,11 @@ public abstract class ExperimentTaskBlock : MonoBehaviour
         // record stats
         stats.Add(task.taskStatistics);
 
-        // Delete task from scene
-        Destroy(task.gameObject);
-        
+        // Leave it around as we need to do stuff with it maybe
+        // Can prob delete it if we make the "success" based on letting go...
+        task.gameObject.SetActive(false);
+        OnEndTask();
+
         // Move on
         AdvanceToNextTask();
     }
@@ -91,16 +94,20 @@ public abstract class ExperimentTaskBlock : MonoBehaviour
     // unity events don't want to let me assign to them, so we're doing a sketchy wrapper here
     public void SelectXRObject_BlockLevel(SelectEnterEventArgs args)
     {
-        currentTask.OnSelectTrackStats(args);
         OnSelectXRObject(args);
+
+        currentTask.OnSelectTrackStats(args);
 
     }
     public abstract void OnSelectXRObject(SelectEnterEventArgs args);
 
     public void DeselectXRObject_BlockLevel(SelectExitEventArgs args)
     {
-        currentTask.OnDeselectTrackStats(args);
         OnDeselectXRObject(args);
+
+        currentTask.OnDeselectTrackStats(args);
     }
     public abstract void OnDeselectXRObject(SelectExitEventArgs args);
+
+    public abstract void OnEndTask();
 }

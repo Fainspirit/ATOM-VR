@@ -9,6 +9,10 @@ public class ExperimentTaskBlock_GoGo : ExperimentTaskBlock
 {
     public override EInteractionType interactionType => EInteractionType.GoGo;
 
+    public override void OnEndTask()
+    {
+    }
+
     public override void OnDeselectXRObject(SelectExitEventArgs args)
     {
         

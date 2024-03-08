@@ -9,6 +9,11 @@ public class ExperimentTaskBlock_Raycast : ExperimentTaskBlock
 {
     public override EInteractionType interactionType => EInteractionType.Raycast;
 
+    public override void OnEndTask()
+    {
+        
+    }
+
     public override void OnDeselectXRObject(SelectExitEventArgs args)
     {
         

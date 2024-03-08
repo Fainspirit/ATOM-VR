@@ -8,8 +8,8 @@ public class ClonedObjectsManager : MonoBehaviour
 {
 
     // Maps <real, copy>
-    Dictionary<GameObject, GameObject> remoteToLocalCopies = new Dictionary<GameObject, GameObject>();
-    Dictionary<GameObject, GameObject> localCopyToRemoteShadowCopies = new Dictionary<GameObject, GameObject>();
+    public Dictionary<GameObject, GameObject> remoteToLocalCopies = new Dictionary<GameObject, GameObject>();
+    public Dictionary<GameObject, GameObject> localCopyToRemoteShadowCopies = new Dictionary<GameObject, GameObject>();
 
     [SerializeField] GameObject remoteSphere;
     [SerializeField] GameObject localSphere;
@@ -173,6 +173,14 @@ public class ClonedObjectsManager : MonoBehaviour
         GameObject grabbedLocalCopy = args.interactableObject.transform.gameObject;      
         GameObject remoteCopy = localCopyToRemoteShadowCopies[grabbedLocalCopy];
         GameObject original = grabbedLocalCopy.GetComponent<OriginTracker>().original;
+
+        // The original disappeared (task change);
+        if (original == null)
+        {
+            localCopyToRemoteShadowCopies.Remove(grabbedLocalCopy);
+            Destroy(grabbedLocalCopy);
+            Destroy(remoteCopy);
+        }
 
         // Update the remote's position based on where the remote copy
         // was when we let go of the local copy - rot too
