@@ -30827,7 +30827,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 561388568}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 77345bc97a0fb9349adcadf9a37cd304, type: 3}
   m_Name: 
@@ -39576,6 +39576,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   taskPool: {fileID: 1192678029}
+  currentTask: {fileID: 0}
   experimentRaycast: {fileID: 1635495545}
 --- !u!1 &712144386
 GameObject:
@@ -44836,6 +44837,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   taskPool: {fileID: 1192678029}
+  currentTask: {fileID: 0}
   objectsManager: {fileID: 403669208}
 --- !u!1 &773190229
 GameObject:
@@ -83178,6 +83180,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   taskPool: {fileID: 1192678029}
+  currentTask: {fileID: 0}
 --- !u!1 &1542671889
 GameObject:
   m_ObjectHideFlags: 0
