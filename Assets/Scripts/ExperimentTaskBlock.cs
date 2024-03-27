@@ -7,16 +7,12 @@ using UnityEngine.XR.Interaction.Toolkit;
 public abstract class ExperimentTaskBlock : MonoBehaviour
 {
     public TaskPool taskPool;
-    public List<TaskStatistics> stats;
     public abstract EInteractionType interactionType { get; }
 
     ExperimentRunner experimentRunner;
-    ExperimentTask currentTask;
+    public ExperimentTask currentTask;
 
-    private void Awake()
-    {
-        stats = new List<TaskStatistics>();
-    }
+
 
     public bool IsTaskBlockFinished()
     {
@@ -35,6 +31,7 @@ public abstract class ExperimentTaskBlock : MonoBehaviour
             currentTask = Instantiate(taskPool.GetTaskFromPool());
             currentTask.gameObject.SetActive(true);
             currentTask.block = this;
+            currentTask.StartTask(experimentRunner.statistics);
 
             // Have the object start this... maybe weirdness with initializing
             //Debug.Log($"Starting task: {nextTask}");
@@ -47,7 +44,6 @@ public abstract class ExperimentTaskBlock : MonoBehaviour
     {
         taskPool.ResetPool();
         experimentRunner = expRun;
-
         AdvanceToNextTask();
     }
 
@@ -56,16 +52,16 @@ public abstract class ExperimentTaskBlock : MonoBehaviour
         experimentRunner.CompleteBlock(this);
     }
 
-    // not the cleanest way to do this but oh well
     public void CompleteTask(ExperimentTask task)
     {
-        // record stats
-        stats.Add(task.taskStatistics);
 
         // Leave it around as we need to do stuff with it maybe
         // Can prob delete it if we make the "success" based on letting go...
-        task.gameObject.SetActive(false);
+        // task.gameObject.SetActive(false);
         OnEndTask();
+
+        // Remove it since stats are already recorded
+        Destroy(task.gameObject);
 
         // DING!
         experimentRunner.audioSource.Play();
@@ -78,20 +74,20 @@ public abstract class ExperimentTaskBlock : MonoBehaviour
 
 
 
-    public void Write(StreamWriter sw)
-    {
-        // Name
-        sw.Write(name + ", ");
+    //public void Write(StreamWriter sw)
+    //{
+    //    // Name
+    //    sw.Write(name + ", ");
 
-        // What technique
-        sw.Write(interactionType.ToString() + ", ");
+    //    // What technique
+    //    sw.Write(interactionType.ToString() + ", ");
 
-        // Write all the tasks
-        foreach(TaskStatistics taskStats in stats)
-        {
-            taskStats.Write(sw);
-        }
-    }
+    //    // Write all the tasks
+    //    foreach(TaskStatistics taskStats in stats)
+    //    {
+    //        taskStats.Write(sw);
+    //    }
+    //}
 
 
     // unity events don't want to let me assign to them, so we're doing a sketchy wrapper here
@@ -99,7 +95,7 @@ public abstract class ExperimentTaskBlock : MonoBehaviour
     {
         OnSelectXRObject(args);
 
-        currentTask.OnSelectObjectInTask(args);
+        currentTask?.OnSelectObjectInTask(args);
 
     }
     public abstract void OnSelectXRObject(SelectEnterEventArgs args);
@@ -108,7 +104,7 @@ public abstract class ExperimentTaskBlock : MonoBehaviour
     {
         OnDeselectXRObject(args);
 
-        currentTask.OnDeselectObjectInTask(args);
+        currentTask?.OnDeselectObjectInTask(args);
     }
     public abstract void OnDeselectXRObject(SelectExitEventArgs args);
 

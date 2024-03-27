@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class TaskPool : MonoBehaviour
@@ -11,11 +12,19 @@ public class TaskPool : MonoBehaviour
 
     private void Awake()
     {
-        if (tasks.Length != 12)
+        if (tasks.Length != 18)
         {
-            Debug.LogWarning("There aren't 12 tasks in the pool!");
+            Debug.LogWarning("There aren't 18 tasks in the pool!");
         }
 
+        // If any task is duplicated
+        foreach (ExperimentTask task in tasks)
+        {
+            if (tasks.Count(t => t == task) > 1){
+                Debug.LogWarning($"DUPLICATE TASK IN THE TASK LIST! ({task})");
+            }
+        }
+    
         ResetPool();
         
     }

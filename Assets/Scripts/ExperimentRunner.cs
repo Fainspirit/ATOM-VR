@@ -8,7 +8,7 @@ using UnityEngine.XR.Interaction.Toolkit;
 public class ExperimentRunner : MonoBehaviour
 {
     [Tooltip("Make sure to change this!")]
-    public int experimentNumber;
+    public int subjectID;
 
     public ExperimentTaskBlock[] taskBlocks;
 
@@ -19,6 +19,9 @@ public class ExperimentRunner : MonoBehaviour
     // Task complete audio used:
     // https://pixabay.com/sound-effects/bloop-2-186531/
     public AudioSource audioSource;
+    public TaskStatistics statistics;
+
+    public Transform XROrigin;
 
     // Raycast = 0,
     // GoGo = 1,
@@ -36,20 +39,25 @@ public class ExperimentRunner : MonoBehaviour
 
     int nextBlockNum = 0;
     int[] selectedPresentationOrder;
-    ExperimentTaskBlock currentBlock;
+    public ExperimentTaskBlock currentBlock;
 
-    private void Start()
+    private void Awake()
     {
         audioSource = GetComponent<AudioSource>();
-
         if (taskBlocks.Length != 3)
         {
             Debug.LogError("There needs to be three task blocks in the experiment!");
         }
-
         // Loop every 6
-        selectedPresentationOrder = presentationOrder[experimentNumber % 6];
+        selectedPresentationOrder = presentationOrder[subjectID % 6];
+    }
 
+    private void Start()
+    {
+        StreamWriter sw = GetResultsWriter();
+        statistics = new TaskStatistics(sw);
+
+        statistics.SetNewSubject(subjectID);
     }
 
     public void BeginExperiments()
@@ -72,7 +80,12 @@ public class ExperimentRunner : MonoBehaviour
         currentBlock.StartTaskBlock(this);
     }
 
-    void ChangeInteractionMechanism(EInteractionType interactionType)
+    public void MoveXROriginTo(Vector3 pos)
+    {
+        XROrigin.position = pos;
+    }
+
+    public void ChangeInteractionMechanism(EInteractionType interactionType)
     {
         switch (interactionType)
         {
@@ -117,11 +130,11 @@ public class ExperimentRunner : MonoBehaviour
 
     void ConcludeExperiment()
     {
+        statistics.writer.Close();
         Debug.Log("Experiment finished!");
-        WriteExperimentResults();
     }
 
-    void WriteExperimentResults()
+    StreamWriter GetResultsWriter()
     {
         DateTime localTimeNow = DateTime.Now.ToLocalTime();
 
@@ -133,33 +146,39 @@ public class ExperimentRunner : MonoBehaviour
             Directory.CreateDirectory(finalFolder);
         }
 
-        string filename = $"ATOM_exp{experimentNumber}_{localTimeNow:yyyyMMdd_HHmmss}.csv";
+        string filename = $"ATOM_exp{subjectID}_{localTimeNow:yyyyMMdd_HHmmss}.csv";
         string finalPath = Path.Combine(finalFolder, filename);
 
-        StreamWriter sw = new StreamWriter(finalPath);
-
-        // Experiment #
-        sw.Write(experimentNumber + ", ");
-
-        // Date+Time
-        sw.Write(localTimeNow.ToString() + ", ");
-
-        // Order that you ran in
-        sw.Write(selectedPresentationOrder[0] + ", ");
-        sw.Write(selectedPresentationOrder[1] + ", ");
-        sw.Write(selectedPresentationOrder[2] + ", ");
-
-        // The block results now
-        taskBlocks[selectedPresentationOrder[0]].Write(sw);
-        taskBlocks[selectedPresentationOrder[1]].Write(sw);
-        taskBlocks[selectedPresentationOrder[2]].Write(sw);
-
-        sw.Flush();
-        sw.Close();
-
-        Debug.Log("Finished writing stats!");
-
+        StreamWriter resultsWriter = new StreamWriter(finalPath);
+        return resultsWriter;
     }
+
+    //void WriteExperimentResults()
+    //{
+
+
+    //    //// Experiment #
+    //    //sw.Write(experimentNumber + ", ");
+
+    //    //// Date+Time
+    //    //sw.Write(localTimeNow.ToString() + ", ");
+
+    //    //// Order that you ran in
+    //    //sw.Write(selectedPresentationOrder[0] + ", ");
+    //    //sw.Write(selectedPresentationOrder[1] + ", ");
+    //    //sw.Write(selectedPresentationOrder[2] + ", ");
+
+    //    //// The block results now
+    //    //taskBlocks[selectedPresentationOrder[0]].Write(sw);
+    //    //taskBlocks[selectedPresentationOrder[1]].Write(sw);
+    //    //taskBlocks[selectedPresentationOrder[2]].Write(sw);
+
+    //    //sw.Flush();
+    //    //sw.Close();
+
+    //    //Debug.Log("Finished writing stats!");
+
+    //}
 
     // Run them to here because apparently we can't assign them at runtime... woo
     public void OnSelectXRObject(SelectEnterEventArgs args)
