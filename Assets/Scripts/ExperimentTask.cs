@@ -21,6 +21,8 @@ public class ExperimentTask : MonoBehaviour
     public ExperimentObjectTaskData grabbedData;
     StreamWriter streamWriter;
 
+    public float expireTimeSeconds = 90;
+
     //private void Start(StreamWriter writer)
     //{
     //    Debug.Log($"Starting task: {name}");
@@ -67,6 +69,12 @@ public class ExperimentTask : MonoBehaviour
             {
                 taskStatistics.timeHoldingIncorrectObject += Time.deltaTime;
             }
+        }
+        
+        // Expire if gone too long
+        if (taskStatistics.totalTaskTime >= expireTimeSeconds)
+        {
+            EndUnsuccessfully();
         }
     }
 

@@ -7,6 +7,7 @@ public class TaskPool : MonoBehaviour
 {
     [Tooltip("The tasks to pick from. Should have 12 tasks")]
     public ExperimentTask[] tasks;
+    public Queue<ExperimentTask> taskQueue;
 
     public int selectionsRemaining;
 
@@ -37,16 +38,26 @@ public class TaskPool : MonoBehaviour
         {
             task.gameObject.SetActive(false);
         }
+
+        // Random "acclimation" trials (to discard)
+        for (int i = 0; i < 3; i++)
+        {
+            taskQueue.Enqueue(GetRandomUnselectedTask());
+        }
+
+        selectionsRemaining = tasks.Length;
+        // Rest of them
+
+        for (int i = 0; i < tasks.Length; i++)
+        {
+            taskQueue.Enqueue(GetRandomUnselectedTask());
+        }
     }
     
-    public bool CanGetTask()
-    {
-        return selectionsRemaining > 0;
-    }
 
-    public ExperimentTask GetTaskFromPool()
+    ExperimentTask GetRandomUnselectedTask()
     {
-        if (!CanGetTask()) { return null; }
+        if (selectionsRemaining <= 0) return null;
 
         int idx = Random.Range(0, selectionsRemaining);
         ExperimentTask ret = tasks[idx];
@@ -56,8 +67,19 @@ public class TaskPool : MonoBehaviour
         tasks[idx] = tasks[selectionsRemaining - 1];
         tasks[selectionsRemaining - 1] = ret;
         selectionsRemaining--;
-        
+
         return ret;
+    }
+    public bool CanGetTask()
+    {
+        return taskQueue.Count > 0;
+    }
+
+    public ExperimentTask GetNextTaskFromPool()
+    {
+        if (!CanGetTask()) { return null; }
+
+        return taskQueue.Dequeue();
     }
 
 }

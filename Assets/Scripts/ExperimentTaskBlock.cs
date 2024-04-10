@@ -28,7 +28,7 @@ public abstract class ExperimentTaskBlock : MonoBehaviour
         else
         {
             // Make copy of it so we can just destroy it later
-            currentTask = Instantiate(taskPool.GetTaskFromPool());
+            currentTask = Instantiate(taskPool.GetNextTaskFromPool());
             currentTask.gameObject.SetActive(true);
             currentTask.block = this;
             currentTask.StartTask(experimentRunner.statistics);
@@ -61,6 +61,7 @@ public abstract class ExperimentTaskBlock : MonoBehaviour
         OnEndTask();
 
         // Remove it since stats are already recorded
+        // We're working on instances so this is fine
         Destroy(task.gameObject);
 
         // DING!

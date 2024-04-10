@@ -24925,6 +24925,7 @@ MonoBehaviour:
   distanceMeters: 60
   occlusionAngleDegrees: 90
   grabbedData: {fileID: 0}
+  expireTimeSeconds: 90
 --- !u!1 &425770504
 GameObject:
   m_ObjectHideFlags: 0
@@ -30819,7 +30820,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &561388569
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30849,6 +30850,7 @@ MonoBehaviour:
   distanceMeters: 10
   occlusionAngleDegrees: 80
   grabbedData: {fileID: 0}
+  expireTimeSeconds: 90
 --- !u!4 &561388570
 Transform:
   m_ObjectHideFlags: 0
@@ -32618,6 +32620,7 @@ MonoBehaviour:
   distanceMeters: 60
   occlusionAngleDegrees: 0
   grabbedData: {fileID: 0}
+  expireTimeSeconds: 90
 --- !u!4 &601724542
 Transform:
   m_ObjectHideFlags: 0
@@ -35773,6 +35776,7 @@ MonoBehaviour:
   distanceMeters: 10
   occlusionAngleDegrees: 0
   grabbedData: {fileID: 0}
+  expireTimeSeconds: 90
 --- !u!4 &637369185
 Transform:
   m_ObjectHideFlags: 0
@@ -36796,6 +36800,7 @@ MonoBehaviour:
   distanceMeters: 60
   occlusionAngleDegrees: 80
   grabbedData: {fileID: 0}
+  expireTimeSeconds: 90
 --- !u!4 &653597538
 Transform:
   m_ObjectHideFlags: 0
@@ -39624,6 +39629,7 @@ MonoBehaviour:
   distanceMeters: 10
   occlusionAngleDegrees: 90
   grabbedData: {fileID: 0}
+  expireTimeSeconds: 90
 --- !u!4 &712144388
 Transform:
   m_ObjectHideFlags: 0
@@ -49921,6 +49927,7 @@ MonoBehaviour:
   distanceMeters: 60
   occlusionAngleDegrees: 80
   grabbedData: {fileID: 0}
+  expireTimeSeconds: 90
 --- !u!4 &903166998
 Transform:
   m_ObjectHideFlags: 0
@@ -54198,6 +54205,7 @@ MonoBehaviour:
   distanceMeters: 60
   occlusionAngleDegrees: 0
   grabbedData: {fileID: 0}
+  expireTimeSeconds: 90
 --- !u!4 &1007535954
 Transform:
   m_ObjectHideFlags: 0
@@ -60763,6 +60771,7 @@ MonoBehaviour:
   distanceMeters: 60
   occlusionAngleDegrees: 0
   grabbedData: {fileID: 0}
+  expireTimeSeconds: 90
 --- !u!4 &1119134135
 Transform:
   m_ObjectHideFlags: 0
@@ -60826,6 +60835,7 @@ MonoBehaviour:
   distanceMeters: 60
   occlusionAngleDegrees: 80
   grabbedData: {fileID: 0}
+  expireTimeSeconds: 90
 --- !u!4 &1119799011
 Transform:
   m_ObjectHideFlags: 0
@@ -63838,6 +63848,7 @@ MonoBehaviour:
   distanceMeters: 60
   occlusionAngleDegrees: 90
   grabbedData: {fileID: 0}
+  expireTimeSeconds: 90
 --- !u!1 &1190461258
 GameObject:
   m_ObjectHideFlags: 0
@@ -63852,6 +63863,7 @@ GameObject:
   - component: {fileID: 1190461262}
   - component: {fileID: 1190461261}
   - component: {fileID: 1190461260}
+  - component: {fileID: 1190461265}
   m_Layer: 6
   m_Name: GOGO_RightHand Controller
   m_TagString: Untagged
@@ -63883,7 +63895,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1190461258}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1af66a55be5065a4e8b9ae83bac2c2f0, type: 3}
   m_Name: 
@@ -64231,6 +64243,23 @@ MonoBehaviour:
     m_Reference: {fileID: 875253871413052681, guid: c348712bda248c246b8c49b3db54643f,
       type: 3}
   m_ButtonPressPoint: 0.5
+--- !u!114 &1190461265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1190461258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 941458b943699ed4a8c3d14498dbf774, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cameraOrigin: {fileID: 323834968}
+  trueHand: {fileID: 948387462}
+  D: 0.3
+  k: 0.16666667
+  sizeScale: 25
 --- !u!1 &1192678028
 GameObject:
   m_ObjectHideFlags: 0
@@ -68571,6 +68600,7 @@ MonoBehaviour:
   distanceMeters: 10
   occlusionAngleDegrees: 80
   grabbedData: {fileID: 0}
+  expireTimeSeconds: 90
 --- !u!4 &1251972102
 Transform:
   m_ObjectHideFlags: 0
@@ -72577,6 +72607,7 @@ GameObject:
   - component: {fileID: 1325850041}
   - component: {fileID: 1325850045}
   - component: {fileID: 1325850044}
+  - component: {fileID: 1325850046}
   m_Layer: 6
   m_Name: RemoteSphere
   m_TagString: Untagged
@@ -72677,7 +72708,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1325850039}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1af66a55be5065a4e8b9ae83bac2c2f0, type: 3}
   m_Name: 
@@ -72700,6 +72731,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clonedObjectsManager: {fileID: 403669208}
+--- !u!114 &1325850046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1325850039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 941458b943699ed4a8c3d14498dbf774, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cameraOrigin: {fileID: 323834968}
+  trueHand: {fileID: 294959308}
+  D: 0.3
+  k: 0.16666667
+  sizeScale: 25
 --- !u!1 &1325905698
 GameObject:
   m_ObjectHideFlags: 0
@@ -73706,6 +73754,7 @@ MonoBehaviour:
   distanceMeters: 10
   occlusionAngleDegrees: 90
   grabbedData: {fileID: 0}
+  expireTimeSeconds: 90
 --- !u!4 &1340664423
 Transform:
   m_ObjectHideFlags: 0
@@ -75049,6 +75098,7 @@ MonoBehaviour:
   distanceMeters: 10
   occlusionAngleDegrees: 0
   grabbedData: {fileID: 0}
+  expireTimeSeconds: 90
 --- !u!4 &1373691012
 Transform:
   m_ObjectHideFlags: 0
@@ -81512,6 +81562,7 @@ MonoBehaviour:
   distanceMeters: 10
   occlusionAngleDegrees: 80
   grabbedData: {fileID: 0}
+  expireTimeSeconds: 90
 --- !u!4 &1504033319
 Transform:
   m_ObjectHideFlags: 0
@@ -81592,6 +81643,7 @@ MonoBehaviour:
   distanceMeters: 60
   occlusionAngleDegrees: 90
   grabbedData: {fileID: 0}
+  expireTimeSeconds: 90
 --- !u!1 &1504577575
 GameObject:
   m_ObjectHideFlags: 0
@@ -99262,6 +99314,7 @@ MonoBehaviour:
   distanceMeters: 10
   occlusionAngleDegrees: 90
   grabbedData: {fileID: 0}
+  expireTimeSeconds: 90
 --- !u!1 &1791534413
 GameObject:
   m_ObjectHideFlags: 0
@@ -124313,6 +124366,7 @@ MonoBehaviour:
   distanceMeters: 10
   occlusionAngleDegrees: 0
   grabbedData: {fileID: 0}
+  expireTimeSeconds: 90
 --- !u!4 &2122906335
 Transform:
   m_ObjectHideFlags: 0
@@ -128270,7 +128324,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6256993136283500838}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 22.5, y: 0.0000019073486, z: 0}
+  m_LocalPosition: {x: 25, y: 0.0000019073486, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
