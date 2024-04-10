@@ -1,13 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem;
+using UnityEngine.XR;
+using UnityEngine.XR.Interaction.Toolkit;
 
 // Implements https://dl.acm.org/doi/pdf/10.1145/237091.237102
 public class OfficialGoGoHand : MonoBehaviour
 {
     // The XR camera origin
-    [SerializeField] Transform cameraOrigin;
+    [SerializeField] Transform xrOrigin;
+    InputDevice HMD;
 
     // The tracked hand whose position will be used to calculate the new position
     [SerializeField] Transform trueHand;
@@ -18,10 +20,15 @@ public class OfficialGoGoHand : MonoBehaviour
     [SerializeField] float D = 0.3f;
     
     // They don't explain it well, but the graph they give uses 1/6
-    [SerializeField, Range(0, 1)] float k = 1.0f/6.0f;
+    [SerializeField, ] float k = 1.0f/6.0f;
 
     // Not part of the paper, but used for visual ease
     [SerializeField] float sizeScale = 25;
+
+    private void Awake()
+    {
+        HMD = InputDevices.GetDeviceAtXRNode(XRNode.Head);
+    }
 
     private void Update()
     {
@@ -39,7 +46,11 @@ public class OfficialGoGoHand : MonoBehaviour
 
     void UpdatePosition(Vector3 trueHandPosition)
     {
-        Vector3 offset = cameraOrigin.position - trueHandPosition;
+        Vector3 centereyePos;
+        HMD.TryGetFeatureValue(CommonUsages.devicePosition, out centereyePos);
+        centereyePos += xrOrigin.transform.position;
+
+        Vector3 offset = trueHandPosition - centereyePos;
 
         // Real length
         float Rr = offset.magnitude;
@@ -59,7 +70,7 @@ public class OfficialGoGoHand : MonoBehaviour
         // Now we have how far we are from it
         // Jump forward that difference and then offset it again
 
-        transform.position = trueHandPosition + virtualOffset;
+        transform.position = centereyePos + virtualOffset;
     }
 }
 

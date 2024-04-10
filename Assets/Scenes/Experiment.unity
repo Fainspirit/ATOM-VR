@@ -23553,7 +23553,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35742e0be77e6e74bb19cc9f373ddc52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GoGoHand: {fileID: 1325850044}
+  GoGoHand: {fileID: 1325850046}
   LocalCopyHandFollower: {fileID: 1558944202}
   SelectActionReference: {fileID: -6131295136447488360, guid: c348712bda248c246b8c49b3db54643f,
     type: 3}
@@ -64255,11 +64255,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 941458b943699ed4a8c3d14498dbf774, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraOrigin: {fileID: 323834968}
+  xrOrigin: {fileID: 498334990}
   trueHand: {fileID: 948387462}
   D: 0.3
-  k: 0.16666667
-  sizeScale: 25
+  k: 500
+  sizeScale: 0.5
 --- !u!1 &1192678028
 GameObject:
   m_ObjectHideFlags: 0
@@ -72743,11 +72743,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 941458b943699ed4a8c3d14498dbf774, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraOrigin: {fileID: 323834968}
+  xrOrigin: {fileID: 498334990}
   trueHand: {fileID: 294959308}
   D: 0.3
-  k: 0.16666667
-  sizeScale: 25
+  k: 500
+  sizeScale: 0.1
 --- !u!1 &1325905698
 GameObject:
   m_ObjectHideFlags: 0

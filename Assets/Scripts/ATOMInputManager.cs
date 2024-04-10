@@ -7,7 +7,7 @@ using UnityEngine.XR.Interaction.Toolkit.Inputs;
 
 public class ATOMInputManager : MonoBehaviour
 {
-    [SerializeField] GoGoHand GoGoHand;
+    [SerializeField] OfficialGoGoHand GoGoHand;
     [SerializeField] TransformFollower LocalCopyHandFollower;
 
     [SerializeField] InputActionReference SelectActionReference;
