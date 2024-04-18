@@ -81,6 +81,7 @@ public class TaskStatistics
     {
         // ID;date;time;
         writer.Write(subjectID.ToString() + delimiter);
+        writer.Write(presentationOrderNum.ToString() + delimiter);
         writer.Write(dateTime.Date.ToString() + delimiter);
         writer.Write(dateTime.TimeOfDay.ToString() + delimiter);
 

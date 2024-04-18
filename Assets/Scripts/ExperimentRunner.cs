@@ -9,6 +9,7 @@ public class ExperimentRunner : MonoBehaviour
 {
     [Tooltip("Make sure to change this!")]
     public int subjectID;
+    [SerializeField, Range(1, 6)] int presentationChosen;
 
     public ExperimentTaskBlock[] taskBlocks;
 
@@ -16,7 +17,6 @@ public class ExperimentRunner : MonoBehaviour
     [SerializeField] GameObject gogoInterface;
     [SerializeField] GameObject ATOMInterface;
 
-    [SerializeField, Range(1, 6)] int presentationChosen;
 
     // Task complete audio used:
     // https://pixabay.com/sound-effects/bloop-2-186531/

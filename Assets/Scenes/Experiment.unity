@@ -274,7 +274,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7eedae4a00d7804998142689e5fefac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  subjectID: 5
+  subjectID: 1
+  presentationChosen: 1
   taskBlocks:
   - {fileID: 706869826}
   - {fileID: 1540542846}
@@ -285,6 +286,7 @@ MonoBehaviour:
   audioSource: {fileID: 8498218}
   statistics:
     subjectID: 0
+    presentationOrderNum: 0
     trialNum: 0
     taskName: 
     interactionType: 0
@@ -24910,6 +24912,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   taskStatistics:
     subjectID: 0
+    presentationOrderNum: 0
     trialNum: 0
     taskName: 
     interactionType: 0
@@ -30835,6 +30838,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   taskStatistics:
     subjectID: 0
+    presentationOrderNum: 0
     trialNum: 0
     taskName: 
     interactionType: 0
@@ -32605,6 +32609,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   taskStatistics:
     subjectID: 0
+    presentationOrderNum: 0
     trialNum: 0
     taskName: 
     interactionType: 0
@@ -35761,6 +35766,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   taskStatistics:
     subjectID: 0
+    presentationOrderNum: 0
     trialNum: 0
     taskName: 
     interactionType: 0
@@ -36785,6 +36791,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   taskStatistics:
     subjectID: 0
+    presentationOrderNum: 0
     trialNum: 0
     taskName: 
     interactionType: 0
@@ -39614,6 +39621,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   taskStatistics:
     subjectID: 0
+    presentationOrderNum: 0
     trialNum: 0
     taskName: 
     interactionType: 0
@@ -49912,6 +49920,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   taskStatistics:
     subjectID: 0
+    presentationOrderNum: 0
     trialNum: 0
     taskName: 
     interactionType: 0
@@ -54190,6 +54199,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   taskStatistics:
     subjectID: 0
+    presentationOrderNum: 0
     trialNum: 0
     taskName: 
     interactionType: 0
@@ -60756,6 +60766,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   taskStatistics:
     subjectID: 0
+    presentationOrderNum: 0
     trialNum: 0
     taskName: 
     interactionType: 0
@@ -60820,6 +60831,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   taskStatistics:
     subjectID: 0
+    presentationOrderNum: 0
     trialNum: 0
     taskName: 
     interactionType: 0
@@ -63833,6 +63845,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   taskStatistics:
     subjectID: 0
+    presentationOrderNum: 0
     trialNum: 0
     taskName: 
     interactionType: 0
@@ -63862,7 +63875,6 @@ GameObject:
   - component: {fileID: 1190461263}
   - component: {fileID: 1190461262}
   - component: {fileID: 1190461261}
-  - component: {fileID: 1190461260}
   - component: {fileID: 1190461265}
   m_Layer: 6
   m_Name: GOGO_RightHand Controller
@@ -63888,23 +63900,6 @@ Transform:
   m_Father: {fileID: 77967346}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1190461260
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1190461258}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1af66a55be5065a4e8b9ae83bac2c2f0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cameraOrigin: {fileID: 323834968}
-  trueHand: {fileID: 948387462}
-  baseMagnitude: 0.3
-  reachScale: 300
-  sizeScale: 5
 --- !u!114 &1190461261
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -68585,6 +68580,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   taskStatistics:
     subjectID: 0
+    presentationOrderNum: 0
     trialNum: 0
     taskName: 
     interactionType: 0
@@ -72606,7 +72602,6 @@ GameObject:
   - component: {fileID: 1325850042}
   - component: {fileID: 1325850041}
   - component: {fileID: 1325850045}
-  - component: {fileID: 1325850044}
   - component: {fileID: 1325850046}
   m_Layer: 6
   m_Name: RemoteSphere
@@ -72701,23 +72696,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1325850039}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1325850044
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1325850039}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1af66a55be5065a4e8b9ae83bac2c2f0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cameraOrigin: {fileID: 323834968}
-  trueHand: {fileID: 294959308}
-  baseMagnitude: 0.3
-  reachScale: 300
-  sizeScale: 5
 --- !u!114 &1325850045
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -73739,6 +73717,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   taskStatistics:
     subjectID: 0
+    presentationOrderNum: 0
     trialNum: 0
     taskName: 
     interactionType: 0
@@ -75083,6 +75062,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   taskStatistics:
     subjectID: 0
+    presentationOrderNum: 0
     trialNum: 0
     taskName: 
     interactionType: 0
@@ -81547,6 +81527,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   taskStatistics:
     subjectID: 0
+    presentationOrderNum: 0
     trialNum: 0
     taskName: 
     interactionType: 0
@@ -81628,6 +81609,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   taskStatistics:
     subjectID: 0
+    presentationOrderNum: 0
     trialNum: 0
     taskName: 
     interactionType: 0
@@ -99299,6 +99281,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   taskStatistics:
     subjectID: 0
+    presentationOrderNum: 0
     trialNum: 0
     taskName: 
     interactionType: 0
@@ -124351,6 +124334,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   taskStatistics:
     subjectID: 0
+    presentationOrderNum: 0
     trialNum: 0
     taskName: 
     interactionType: 0
