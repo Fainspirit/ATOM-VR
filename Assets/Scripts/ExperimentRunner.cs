@@ -16,6 +16,8 @@ public class ExperimentRunner : MonoBehaviour
     [SerializeField] GameObject gogoInterface;
     [SerializeField] GameObject ATOMInterface;
 
+    [SerializeField, Range(1, 6)] int presentationChosen;
+
     // Task complete audio used:
     // https://pixabay.com/sound-effects/bloop-2-186531/
     public AudioSource audioSource;
@@ -27,7 +29,7 @@ public class ExperimentRunner : MonoBehaviour
     // GoGo = 1,
     // ATOM = 2,
 
-    int[][] presentationOrder =
+    int[][] presentationOrdersArray =
     {
         new int[] { 0, 1, 2 }, // R, G, A
         new int[] { 0, 2, 1 }, // R, A, G
@@ -48,8 +50,14 @@ public class ExperimentRunner : MonoBehaviour
         {
             Debug.LogError("There needs to be three task blocks in the experiment!");
         }
+
         // Loop every 6
-        selectedPresentationOrder = presentationOrder[subjectID % 6];
+        //selectedPresentationOrder = presentationOrder[subjectID % 6];
+        if (presentationChosen < 1 || presentationChosen > 6)
+        {
+            Debug.LogError("Presentation selection must be in range of 1 to 6");
+        }
+        selectedPresentationOrder = presentationOrdersArray[presentationChosen - 1];
     }
 
     private void Start()
@@ -57,7 +65,7 @@ public class ExperimentRunner : MonoBehaviour
         StreamWriter sw = GetResultsWriter();
         statistics = new TaskStatistics(sw);
 
-        statistics.SetNewSubject(subjectID);
+        statistics.SetNewSubject(subjectID, presentationChosen);
     }
 
     public void BeginExperiments()

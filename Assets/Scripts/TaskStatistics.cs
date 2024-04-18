@@ -9,14 +9,28 @@ public class TaskStatistics
 
     public StreamWriter writer;
 
+    // Unique ID per participant
     public int subjectID;
+
+    // What of the six orders was it?
+    public int presentationOrderNum;
     public DateTime dateTime;
 
     // ---
+    // What # trial/task are we on
     public int trialNum;
+
+    // What is the name (pulled from prefab) of this trial/task?
     public string taskName;
+
+    // GoGo, Raycast, ATOM
     public EInteractionType interactionType;
+
+    // How far is the object group?
     public int distanceMeters;
+
+    // How occluded is the object group?
+    // Full occlusion - 90deg, No occlusion - 0deg
     public int occlutionAngleDegrees;
 
     // ---
@@ -34,9 +48,10 @@ public class TaskStatistics
         this.writer = writer; 
     }
 
-    public void SetNewSubject(int id)
+    public void SetNewSubject(int id, int presentationOrderNumIn)
     {
         subjectID = id;
+        presentationOrderNum = presentationOrderNumIn;
         dateTime = DateTime.Now.ToLocalTime();
     }
 
