@@ -64253,7 +64253,7 @@ MonoBehaviour:
   xrOrigin: {fileID: 498334990}
   trueHand: {fileID: 948387462}
   D: 0.3
-  k: 500
+  k: 550
   sizeScale: 0.5
 --- !u!1 &1192678028
 GameObject:
@@ -72724,7 +72724,7 @@ MonoBehaviour:
   xrOrigin: {fileID: 498334990}
   trueHand: {fileID: 294959308}
   D: 0.3
-  k: 500
+  k: 550
   sizeScale: 0.1
 --- !u!1 &1325905698
 GameObject:
